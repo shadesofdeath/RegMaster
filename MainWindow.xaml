@@ -1,0 +1,57 @@
+﻿<ui:FluentWindow x:Class="RegMaster.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegMaster"
+        mc:Ignorable="d"
+        ExtendsContentIntoTitleBar="True"
+        WindowBackdropType="Mica"
+        WindowStartupLocation="CenterScreen"
+        Title="RegMaster"
+        ResizeMode="NoResize"
+        Height="650"
+        Width="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ui:TitleBar Title="RegMaster v1.0" Grid.Row="0" ShowMaximize="False" ShowMinimize="False" CanMaximize="False" VerticalAlignment="Top"/>
+
+        <ui:TextBox PlaceholderText="Search.." x:Name="RegCodeTextBox" Grid.Row="1" Margin="10"  TextChanged="RegCodeTextBox_TextChanged" BorderThickness="0"/>
+
+        <WrapPanel Grid.Row="2" Margin="16,8,0,0">
+            <TextBlock ToolTip="Reverses the reg operation." Text="Revert:" Margin="0,0,8,0" />
+            <ui:ToggleSwitch x:Name="RevertToggleSwitch" Checked="RevertToggleSwitch_Checked" Unchecked="RevertToggleSwitch_Unchecked"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <ui:Button ToolTip="You can output it as a .REG file." Click="SaveReg_Click"  Margin="0,0,4,0" BorderThickness="0" CornerRadius="12" Height="32" Background="#D24545" MouseOverBackground="#D24545" PressedBackground="#A94438">
+                <ui:SymbolIcon Symbol="ArrowDownload24"/>
+            </ui:Button>
+            <ui:Button ToolTip="You can run it directly without having to save it as a reg file." Click="SaveAndRunReg_Click"  Margin="4,0,4,0" BorderThickness="0" CornerRadius="12" Height="32" Background="#569DAA" MouseOverBackground="#569DAA" PressedBackground="#577D86">
+                <ui:SymbolIcon Symbol="Play24"/>
+            </ui:Button>
+            <ui:Button Click="BuyMeCoffee_Click"  Margin="4,0,4,0" BorderThickness="0" CornerRadius="12" Height="32" Background="#776240" MouseOverBackground="#8C6D5C" PressedBackground="#8C6D5C">
+                <ui:SymbolIcon Symbol="DrinkCoffee24"/>
+            </ui:Button>
+            <ui:Button x:Name="ChangeThemeButton" BorderThickness="0" Click="ChangeTheme_Click" Margin="4,0,6,0" CornerRadius="12" Height="32" Width="40">
+                <ui:SymbolIcon Symbol="WeatherSunny16"/>
+            </ui:Button>
+            <ui:Button IsEnabled="False" BorderThickness="0" CornerRadius="12" Margin="4,0,10,0">
+                <ui:TextBlock x:Name="RegCountTextBlock" FontSize="13"/>
+            </ui:Button>
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="3" MinHeight="500" MaxHeight="500">
+            <ui:Card  Margin="12,10,0,10" >
+                <ListView x:Name="MatchingNamesListBox" SelectionChanged="MatchingNamesListBox_SelectionChanged" MinWidth="500" MaxWidth="500" MinHeight="450" MaxHeight="450"/>
+            </ui:Card>
+            <ui:TextBox x:Name="RegCodeDisplayTextBox" Margin="10" FontSize="13" AutoWordSelection="True" ClearButtonEnabled="True" AcceptsReturn="True" TextWrapping="Wrap" MinHeight="500" BorderThickness="0" MinWidth="520" MaxWidth="520" MaxHeight="500"/>
+        </WrapPanel>
+        
+    </Grid>
+</ui:FluentWindow>

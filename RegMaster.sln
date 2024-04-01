@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegMaster", "RegMaster.csproj", "{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}.All|Any CPU.Build.0 = Release|Any CPU
+		{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCD8E6B-20F4-4E12-B933-8344E5D990EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D515DBD7-4607-482D-ABA1-72755F81EE54}
+	EndGlobalSection
+EndGlobal

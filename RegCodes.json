@@ -1,0 +1,1067 @@
+[
+  {
+    "Name": "Disable Copilot",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Copilot\n\n[HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\WindowsCopilot]\n\"TurnOffWindowsCopilot\"=dword:00000001\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsCopilot]\n\"TurnOffWindowsCopilot\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Copilot\n\n[HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\WindowsCopilot]\n\"TurnOffWindowsCopilot\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsCopilot]\n\"TurnOffWindowsCopilot\"=-"
+  },
+  {
+    "Name": "Disable Modern Standby",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Modern Standby\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power]\n\"PlatformAoAcOverride\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Modern Standby\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power]\n\"PlatformAoAcOverride\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Real-Time Protection (Temporarily)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Real-Time Protection\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Real-Time Protection]\n\"DisableRealtimeMonitoring\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Real-Time Protection\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Real-Time Protection]\n\"DisableRealtimeMonitoring\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Restart",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Update Automatic Restart\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Update Automatic Restart\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=-"
+  },
+  {
+    "Name": "Disable OneDrive Integration",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable OneDrive Integration\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\OneDrive]\n\"DisableFileSyncNGSC\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable OneDrive Integration\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\OneDrive]\n\"DisableFileSyncNGSC\"=-"
+  },
+  {
+    "Name": "Disable Windows Search Indexing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Search Indexing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Search]\n\"AllowIndexingEncryptedStoresOrItems\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Search Indexing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Search]\n\"AllowIndexingEncryptedStoresOrItems\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Cloud-Based Protection",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Cloud-Based Protection\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet]\n\"SpynetReporting\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Cloud-Based Protection\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet]\n\"SpynetReporting\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Automatic Sample Submission",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Automatic Sample Submission\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet]\n\"SubmitSamplesConsent\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Automatic Sample Submission\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Spynet]\n\"SubmitSamplesConsent\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender PUA (Potentially Unwanted Application) Protection",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender PUA Protection\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\MpEngine]\n\"MpEnablePus\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender PUA Protection\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\MpEngine]\n\"MpEnablePus\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Network Inspection System",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Network Inspection System\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Network Inspection System]\n\"DisableNetworkInspectionSystem\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Network Inspection System\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Network Inspection System]\n\"DisableNetworkInspectionSystem\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Controlled Folder Access",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Controlled Folder Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Controlled Folder Access]\n\"EnableControlledFolderAccess\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Controlled Folder Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Controlled Folder Access]\n\"EnableControlledFolderAccess\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Exploit Guard",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Exploit Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Exploit Guard]\n\"EnableExploitProtection\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Exploit Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Exploit Guard]\n\"EnableExploitProtection\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Application Guard",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Application Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Application Guard]\n\"EnableApplicationGuard\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Application Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Application Guard]\n\"EnableApplicationGuard\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Credential Guard",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Credential Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Credential Guard]\n\"EnableCredentialGuard\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Credential Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Credential Guard]\n\"EnableCredentialGuard\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Device Guard",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Device Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Device Guard]\n\"EnableVirtualizationBasedSecurity\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Device Guard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Device Guard]\n\"EnableVirtualizationBasedSecurity\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Advanced Threat Protection (ATP)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender ATP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\ATP]\n\"DisableATP\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender ATP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\ATP]\n\"DisableATP\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Firewall",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Firewall\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\mpssvc]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Firewall\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\mpssvc]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Windows Defender SmartScreen",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender SmartScreen\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"EnableSmartScreen\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender SmartScreen\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"EnableSmartScreen\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender User Account Control (UAC)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender UAC\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]\n\"EnableLUA\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender UAC\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]\n\"EnableLUA\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Application Control",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Application Control\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Application Control]\n\"EnableAppLocker\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Application Control\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Application Control]\n\"EnableAppLocker\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender BitLocker Drive Encryption",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender BitLocker\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\FVE]\n\"DisablePasswordComplexity\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender BitLocker\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\FVE]\n\"DisablePasswordComplexity\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Information Protection (WIP)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender WIP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Windows Information Protection]\n\"EnableWIP\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender WIP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Windows Information Protection]\n\"EnableWIP\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Security Center",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Security Center\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender Security Center]\n\"DisableSecurityCenter\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Security Center\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender Security Center]\n\"DisableSecurityCenter\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Family Safety",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Family Safety\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Parental Controls]\n\"TurnOffParentalControls\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Family Safety\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Parental Controls]\n\"TurnOffParental Controls\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Error Reporting",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting]\n\"Disabled\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting]\n\"Disabled\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Defender Offline",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Offline\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Scan]\n\"DisableOfflineScan\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Offline\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\Scan]\n\"DisableOfflineScan\"=-"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Defender Antivirus Service",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Antivirus Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WinDefend]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Antivirus Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WinDefend]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Defender Security Center Service",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Security Center Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SecurityHealthService]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Security Center Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SecurityHealthService]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Defender Firewall with Advanced Security Service",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Firewall Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\MpsSvc]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Firewall Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\MpsSvc]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Defender Exploit Guard Service",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Exploit Guard Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WdNisSvc]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Exploit Guard Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WdNisSvc]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Windows Defender Windows Defender Application Guard Service",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Defender Application Guard Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WdagSvc]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Defender Application Guard Service\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WdagSvc]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Fast Startup",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Fast Startup\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power]\n\"HiberbootEnabled\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Fast Startup\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power]\n\"HiberbootEnabled\"=dword:00000001"
+  },
+  {
+    "Name": "Disable Windows Update Delivery Optimization",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Delivery Optimization\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization]\n\"DODownloadMode\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Delivery Optimization\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization]\n\"DODownloadMode\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Peer-to-Peer Sharing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Peer-to-Peer Sharing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization]\n\"AllowPeerCaching\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Peer-to-Peer Sharing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DeliveryOptimization]\n\"AllowPeerCaching\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Background Downloads",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Background Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Background Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Active Hours",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Active Hours\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ActiveHoursStart\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ActiveHoursEnd\"=-",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Active Hours\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ActiveHoursStart\"=dword:00000008\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ActiveHoursEnd\"=dword:00000017"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Driver Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Driver Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"ExcludeWUDriversInQualityUpdate\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Driver Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"ExcludeWUDriversInQualityUpdate\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Feature Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Feature Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"ProductVersion\"=\"10.0.19041.1\"\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"TargetReleaseVersion\"=dword:00000001\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"TargetReleaseVersionInfo\"=\"10.0.19041.1\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Feature Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"ProductVersion\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"TargetReleaseVersion\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"TargetReleaseVersionInfo\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Quality Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Quality Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Quality Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Security Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Security Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Security Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Optional Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Optional Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Optional Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Driver Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Driver Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"ExcludeWUDriversInQualityUpdate\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Driver Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"ExcludeWUDriversInQualityUpdate\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Microsoft Update",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Microsoft Update\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableWindowsUpdateAccess\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Microsoft Update\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableWindowsUpdateAccess\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Checks",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Checks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoUpdate\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Checks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoUpdate\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Downloads",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Installations",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Installations\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Installations\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AUOptions\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Reboots",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Reboots\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Reboots\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Scheduling",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Scheduling\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ScheduledInstallDay\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ScheduledInstallTime\"=-",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Scheduling\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ScheduledInstallDay\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"ScheduledInstallTime\"=dword:00000003"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Wake-up",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Wake-up\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AllowWakeToRunMaintenance\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Wake-up\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"AllowWakeToRunMaintenance\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Pausing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Pausing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisablePauseUXAccess\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Pausing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisablePauseUXAccess\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Restart Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Restart Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Restart Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Restart Reminders",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Restart Reminders\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Restart Reminders\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Restart Warnings",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Restart Warnings\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Restart Warnings\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"NoAutoRebootWithLoggedOnUsers\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Deferrals",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Deferrals\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferFeatureUpdates\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferFeatureUpdatesPeriodInDays\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferQualityUpdates\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferQualityUpdatesPeriodInDays\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Deferrals\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferFeatureUpdates\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferFeatureUpdatesPeriodInDays\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferQualityUpdates\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DeferQualityUpdatesPeriodInDays\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Rollbacks",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Rollbacks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableRollback\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Rollbacks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableRollback\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Uninstalls",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Uninstalls\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"UninstallWUService\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Uninstalls\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"UninstallWUService\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Cleanup",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Cleanup\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableCleanupOfUnusedUpdatesOnSchedule\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Cleanup\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableCleanupOfUnusedUpdatesOnSchedule\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Disk Space Management",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Disk Space Management\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableAutomaticDiskSpaceManagement\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Disk Space Management\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"DisableAutomaticDiskSpaceManagement\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Downloads",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoDownloadForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoDownloadForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Installations",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Installations\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoInstallForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Installations\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoInstallForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoNotifyForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoNotifyForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Reboots",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Reboots\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoRebootForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Reboots\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoRebootForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Scheduling",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Scheduling\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoScheduleForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Scheduling\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoScheduleForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Wake-up",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Wake-up\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAllowWakeToRunMaintenanceForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Wake-up\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAllowWakeToRunMaintenanceForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Pausing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Pausing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisablePauseUXAccessForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Pausing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisablePauseUXAccessForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Restart Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Restart Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Restart Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Restart Reminders",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Restart Reminders\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Restart Reminders\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Restart Warnings",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Restart Warnings\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Restart Warnings\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Deferrals",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Deferrals\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesForMeteredConnections\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesPeriodInDaysForMeteredConnections\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesForMeteredConnections\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesPeriodInDaysForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Deferrals\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesPeriodInDaysForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesPeriodInDaysForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Rollbacks",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Rollbacks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableRollbackForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Rollbacks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableRollbackForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Uninstalls",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Uninstalls\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetUninstallWUServiceForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Uninstalls\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetUninstallWUServiceForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Cleanup",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Cleanup\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableCleanupOfUnusedUpdatesOnScheduleForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Cleanup\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableCleanupOfUnusedUpdatesOnScheduleForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Disk Space Management",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Disk Space Management\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableAutomaticDiskSpaceManagementForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Disk Space Management\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableAutomaticDiskSpaceManagementForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Driver Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Driver Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetExcludeWUDriversInQualityUpdateForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Driver Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetExcludeWUDriversInQualityUpdateForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Feature Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Feature Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetProductVersionForMeteredConnections\"=\"10.0.19041.1\"\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetTargetReleaseVersionForMeteredConnections\"=dword:00000001\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetTargetReleaseVersionInfoForMeteredConnections\"=\"10.0.19041.1\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Feature Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetProductVersionForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetTargetReleaseVersionForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetTargetReleaseVersionInfoForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Quality Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Quality Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Quality Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Security Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Security Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Security Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Optional Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Optional Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Optional Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Microsoft Update",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Microsoft Update\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableWindowsUpdateAccessForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Microsoft Update\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableWindowsUpdateAccessForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Checks",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Checks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetNoAutoUpdateForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Checks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetNoAutoUpdateForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Downloads",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Downloads\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Installations",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Installations\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Installations\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate\\AU]\n\"SetAUOptionsForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Reboots",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Reboots\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Reboots\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Scheduling",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Scheduling\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoScheduleForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Scheduling\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAutoScheduleForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Wake-up",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Wake-up\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAllowWakeToRunMaintenanceForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Wake-up\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetAllowWakeToRunMaintenanceForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Pausing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Pausing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisablePauseUXAccessForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Pausing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisablePauseUXAccessForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Restart Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Restart Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Restart Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Restart Reminders",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Restart Reminders\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Restart Reminders\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Restart Warnings",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Restart Warnings\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Restart Warnings\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetNoAutoRebootWithLoggedOnUsersForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Deferrals",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Deferrals\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesForMeteredConnections\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesPeriodInDaysForMeteredConnections\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesForMeteredConnections\"=dword:00000000\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesPeriodInDaysForMeteredConnections\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Deferrals\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferFeatureUpdatesPeriodInDaysForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesForMeteredConnections\"=-\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDeferQualityUpdatesPeriodInDaysForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Windows Update Automatic Update Metered Network Automatic Update Rollbacks",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Update Metered Network Automatic Update Rollbacks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableRollbackForMeteredConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update Metered Network Automatic Update Rollbacks\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsUpdate]\n\"SetDisableRollbackForMeteredConnections\"=-"
+  },
+  {
+    "Name": "Disable Lock Screen",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Lock Screen\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization]\n\"NoLockScreen\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Lock Screen\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization]\n\"NoLockScreen\"=-"
+  },
+  {
+    "Name": "Disable Action Center",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Action Center\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"DisableNotificationCenter\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Action Center\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"DisableNotificationCenter\"=-"
+  },
+  {
+    "Name": "Disable Cortana",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Cortana\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]\n\"AllowCortana\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Cortana\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]\n\"AllowCortana\"=-"
+  },
+  {
+    "Name": "Disable User Account Picture",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable User Account Picture\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoLocalUserAccounts\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable User Account Picture\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoLocalUserAccounts\"=-"
+  },
+  {
+    "Name": "Disable Recent Items",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Recent Items\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoRecentDocsHistory\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Recent Items\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoRecentDocsHistory\"=-"
+  },
+  {
+    "Name": "Disable Quick Access in File Explorer",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Quick Access\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"LaunchTo\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Quick Access\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"LaunchTo\"=-"
+  },
+  {
+    "Name": "Disable File Explorer Ads",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable File Explorer Ads\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"ShowSyncProviderNotifications\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable File Explorer Ads\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"ShowSyncProviderNotifications\"=-"
+  },
+  {
+    "Name": "Disable Automatic App Updates",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic App Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\WindowsStore]\n\"AutoDownload\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic App Updates\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\WindowsStore]\n\"AutoDownload\"=-"
+  },
+  {
+    "Name": "Disable Game Bar",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Game Bar\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\GameBar]\n\"ShowStartupPanel\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Game Bar\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\GameBar]\n\"ShowStartupPanel\"=-"
+  },
+  {
+    "Name": "Disable Game DVR",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Game DVR\n\n[HKEY_CURRENT_USER\\System\\GameConfigStore]\n\"GameDVR_Enabled\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Game DVR\n\n[HKEY_CURRENT_USER\\System\\GameConfigStore]\n\"GameDVR_Enabled\"=-"
+  },
+  {
+    "Name": "Disable Windows Tips",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Tips\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager]\n\"SubscribedContent-33E3AB3A-B65F-480C-B8E3-77417C5928F2\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Tips\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager]\n\"SubscribedContent-33E3AB3A-B65F-480C-B8E3-77417C5928F2\"=-"
+  },
+  {
+    "Name": "Disable Shake to Minimize",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Shake to Minimize\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"DisallowShaking\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Shake to Minimize\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"DisallowShaking\"=-"
+  },
+  {
+    "Name": "Disable Thumbnail Previews",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Thumbnail Previews\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"DisableThumbnails\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Thumbnail Previews\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"DisableThumbnails\"=-"
+  },
+  {
+    "Name": "Disable Balloon Tips",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Balloon Tips\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"EnableBalloonTips\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Balloon Tips\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"EnableBalloonTips\"=-"
+  },
+  {
+    "Name": "Disable Autoplay",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Autoplay\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoDriveTypeAutoRun\"=dword:000000FF",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Autoplay\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoDriveTypeAutoRun\"=-"
+  },
+  {
+    "Name": "Disable Windows Error Reporting",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting]\n\"Disabled\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting]\n\"Disabled\"=-"
+  },
+  {
+    "Name": "Disable Remote Assistance",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Remote Assistance\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Remote Assistance]\n\"fAllowToGetHelp\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Remote Assistance\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Remote Assistance]\n\"fAllowToGetHelp\"=-"
+  },
+  {
+    "Name": "Disable Remote Desktop",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Remote Desktop\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server]\n\"fDenyTSConnections\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Remote Desktop\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server]\n\"fDenyTSConnections\"=-"
+  },
+  {
+    "Name": "Disable Network List Manager Policies",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Network List Manager Policies\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\DusmSvc]\n\"Profiles\\{GUID}\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Network List Manager Policies\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\DusmSvc]\n\"Profiles\\{GUID}\"=-"
+  },
+  {
+    "Name": "Disable Network Location Awareness",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Network Location Awareness\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\NlaSvc]\n\"Start\"=dword:00000004",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Network Location Awareness\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\NlaSvc]\n\"Start\"=dword:00000002"
+  },
+  {
+    "Name": "Disable Telemetry and Data Collection",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Telemetry\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Telemetry\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=-"
+  },
+  {
+    "Name": "Disable File History Backup",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable File History\n\n[HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\FileHistory]\n\"Enabled\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable File History\n\n[HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Windows\\FileHistory]\n\"Enabled\"=dword:00000001"
+  },
+  {
+    "Name": "Disable Diagnostic Data Viewer",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Diagnostic Data Viewer\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\EventTranscriptKey]\n\"EnableEventTranscript\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Diagnostic Data Viewer\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\EventTranscriptKey]\n\"EnableEventTranscript\"=dword:00000001"
+  },
+  {
+    "Name": "Disable Cloud Content",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Cloud Content\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent]\n\"DisableCloudOptimizedContent\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Cloud Content\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent]\n\"DisableCloudOptimizedContent\"=-"
+  },
+  {
+    "Name": "Disable Camera Access",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Camera Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\webcam]\n\"Value\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Camera Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\CapabilityAccessManager\\ConsentStore\\webcam]\n\"Value\"=dword:00000001"
+  },
+  {
+    "Name": "Disable Automatic Maintenance to Wake Up Computer",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Background Apps\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance]\n\"WakeUp\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Background Apps\n\n[HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance]\n\"WakeUp\"=dword:00000001"
+  },
+  {
+    "Name": "Turn off automatic learning",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable automatic learning\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\InputPersonalization]\n\"RestrictImplicitTextCollection\"=dword:00000000\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\InputPersonalization]\n\"RestrictImplicitInkCollection\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable automatic learning\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\InputPersonalization]\n\"RestrictImplicitTextCollection\"=dword:00000001\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\InputPersonalization]\n\"RestrictImplicitInkCollection\"=dword:00000001"
+  },
+  {
+    "Name": "Prevent Changing Start Menu Background",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Prevent Changing Start Menu Background\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization]\n\"NoChangingStartMenuBackground\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Changing Start Menu Background\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization]\n\"NoChangingStartMenuBackground\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Users to Enable Online Speech Recognition Services",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Allow Online Speech Recognition Services\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\InputPersonalization]\n\"AllowInputPersonalization\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Online Speech Recognition Services\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\InputPersonalization]\n\"AllowInputPersonalization\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Online Tips in Settings App",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Allow Online Tips\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"AllowOnlineTips\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Online Tips\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"AllowOnlineTips\"=dword:00000000"
+  },
+  {
+    "Name": "Allow BITS Peercaching",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable BITS Peercaching\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\BITS]\n\"EnablePeercaching\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable BITS Peercaching\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\BITS]\n\"EnablePeercaching\"=dword:00000000"
+  },
+  {
+    "Name": "Windows Defender Firewall: Prohibit Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Prohibit Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\DomainProfile]\n\"DisableNotifications\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\WindowsFirewall\\DomainProfile]\n\"DisableNotifications\"=dword:00000000"
+  },
+  {
+    "Name": "Allow or Disallow Use of Offline Files Feature",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Offline Files\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\NetCache]\n\"Enabled\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Offline Files\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\NetCache]\n\"Enabled\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Network Usage for Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Network Usage\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications]\n\"NoCloudApplicationNotification\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Network Usage\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\PushNotifications]\n\"NoCloudApplicationNotification\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Context Menus in the Start Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Context Menus\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"DisableContextMenusInStart\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Context Menus\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"DisableContextMenusInStart\"=dword:00000000"
+  },
+  {
+    "Name": "Do Not Keep History of Recently Opened Documents",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Recent Documents History\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoRecentDocsHistory\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Recent Documents History\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoRecentDocsHistory\"=dword:00000000"
+  },
+  {
+    "Name": "Force Start to be Full Screen",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Force Full Screen Start\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ForceStartSize\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow User Choice for Start Size\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ForceStartSize\"=-"
+  },
+  {
+    "Name": "Remove Recently Added List from Start Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Remove Recently Added List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"HideRecentlyAddedApps\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Show Recently Added List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"HideRecentlyAddedApps\"=dword:00000000"
+  },
+  {
+    "Name": "Collapse All Programs List",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Collapse All Programs List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000003",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Show All Programs List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000000"
+  },
+  {
+    "Name": "Leave All Programs List Unchanged",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Leave All Programs List Unchanged\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000000",
+    "RevertCode": ""
+  },
+  {
+    "Name": "Collapse and Disable All Programs Setting",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Collapse and Disable Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Show All Programs List and Enable Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000000"
+  },
+  {
+    "Name": "Remove and Disable All Programs Setting",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Remove and Disable Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Show All Programs List and Enable Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMorePrograms\"=dword:00000000"
+  },
+  {
+    "Name": "Remove Frequent Programs List from Start Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Remove Frequent Programs List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMFUprogramsList\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Show Frequent Programs List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStartMenuMFUprogramsList\"=dword:00000000"
+  },
+  {
+    "Name": "Remove and Prevent Access to Power Commands",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Remove and Prevent Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"HidePowerOptions\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Access to Power Commands\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"HidePowerOptions\"=dword:00000000"
+  },
+  {
+    "Name": "Show Most Used List in Start Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Show Most Used List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowOrHideMostUsedApps\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow User Choice for Most Used List Visibility\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowOrHideMostUsedApps\"=dword:00000000"
+  },
+  {
+    "Name": "Hide Most Used List in Start Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Hide Most Used List\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowOrHideMostUsedApps\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow User Choice for Most Used List Visibility\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowOrHideMostUsedApps\"=dword:00000000"
+  },
+  {
+    "Name": "Do Not Allow Compression on All NTFS Volumes",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Compression\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisableCompression\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Compression\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisableCompression\"=dword:00000000"
+  },
+  {
+    "Name": "Do Not Allow Encryption on All NTFS Volumes",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Encryption\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisableEncryption\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Encryption\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisableEncryption\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Short Names on All Volumes",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Short Names\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisable8dot3NameCreation\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Short Names\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisable8dot3NameCreation\"=dword:00000000"
+  },
+  {
+    "Name": "Enable/Disable Short Names Per Volume",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable/Disable Per Volume\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisable8dot3NameCreation\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Choose Another Option\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisable8dot3NameCreation\"=-"
+  },
+  {
+    "Name": "Disable Short Names on Data Volumes",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable on Data Volumes\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisable8dot3NameCreation\"=dword:00000003",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Choose Another Option\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Policies]\n\"NtfsDisable8dot3NameCreation\"=-"
+  },
+  {
+    "Name": "Enable Win32 Long Paths",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Long Paths\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem]\n\"LongPathsEnabled\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Long Paths\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem]\n\"LongPathsEnabled\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Windows Error Reporting (PCHealth)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting]\n\"DoReport\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting]\n\"DoReport\"=dword:00000001"
+  },
+  {
+    "Name": "Turn Off Windows Error Reporting (WER)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting]\n\"Disabled\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting]\n\"Disabled\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Windows Customer Experience Improvement Program",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off CEIP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows]\n\"CEIPEnable\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable CEIP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows]\n\"CEIPEnable\"=dword:00000001"
+  },
+  {
+    "Name": "Turn Off Publish to Web Task",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Publish to Web Task\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoPublishingWizard\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Publish to Web Task\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoPublishingWizard\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Printing Over HTTP",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Printing Over HTTP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers]\n\"DisableHTTPPrinting\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Printing Over HTTP\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers]\n\"DisableHTTPPrinting\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Internet File Association Service",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Service\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoInternetOpenWith\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Service\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoInternetOpenWith\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Internet Connection Wizard for Microsoft.com URLs",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Wizard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Internet Connection Wizard]\n\"ExitOnMSICW\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Wizard\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Internet Connection Wizard]\n\"ExitOnMSICW\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Help and Support Center Did You Know Content",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Did You Know Content\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\HelpSvc]\n\"Headlines\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Did You Know Content\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\HelpSvc]\n\"Headlines\"=dword:00000001"
+  },
+  {
+    "Name": "Turn Off Handwriting Recognition Error Reporting",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\HandwritingErrorReports]\n\"PreventHandwritingErrorReports\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Error Reporting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\HandwritingErrorReports]\n\"PreventHandwritingErrorReports\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Handwriting Personalization Data Sharing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Data Sharing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\TabletPC]\n\"PreventHandwritingDataSharing\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Data Sharing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\TabletPC]\n\"PreventHandwritingDataSharing\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Event Viewer Events.asp Links",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Events.asp Links\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\EventViewer]\n\"MicrosoftEventVwrDisableLinks\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Events.asp Links\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\EventViewer]\n\"MicrosoftEventVwrDisableLinks\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Automatic Root Certificates Update",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Automatic Update\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\SystemCertificates\\AuthRoot]\n\"DisableRootAutoUpdate\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Update\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\SystemCertificates\\AuthRoot]\n\"DisableRootAutoUpdate\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Access to Store for Unhandled File Types",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Store Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"NoUseStoreOpenWith\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Store Access\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"NoUseStoreOpenWith\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Windows Update Device Driver Searching",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Driver Searching\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DriverSearching]\n\"DontSearchWindowsUpdate\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Driver Searching\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DriverSearching]\n\"DontSearchWindowsUpdate\"=dword:00000000"
+  },
+  {
+    "Name": "Turn Off Windows Startup Sound",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off Startup Sound\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]\n\"DisableStartupSound\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Startup Sound\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]\n\"DisableStartupSound\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Clipboard History",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Clipboard History\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"AllowClipboardHistory\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Clipboard History\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"AllowClipboardHistory\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Clipboard Synchronization Across Devices",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Clipboard Synchronization\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"AllowCrossDeviceClipboard\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Clipboard Synchronization\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"AllowCrossDeviceClipboard\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Publishing of User Activities",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable User Activities Publishing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"PublishUserActivities\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable User Activities Publishing\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"PublishUserActivities\"=dword:00000000"
+  },
+  {
+    "Name": "Enable Activity Feed",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Activity Feed\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"EnableActivityFeed\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Activity Feed\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\System]\n\"EnableActivityFeed\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Storage Sense",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Storage Sense\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\StorageSense]\n\"AllowStorageSenseGlobal\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\StorageSense]\n\"AllowStorageSenseGlobal\"=-"
+  },
+  {
+    "Name": "Disable Storage Sense Temporary Files Cleanup",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Temporary Files Cleanup\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\StorageSense]\n\"AllowStorageSenseTemporaryFilesCleanup\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\StorageSense]\n\"AllowStorageSenseTemporaryFilesCleanup\"=-"
+  },
+  {
+    "Name": "Turn Off System Restore",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn Off System Restore\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore]\n\"DisableSR\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable System Restore\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore]\n\"DisableSR\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Scheduled Maintenance",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Scheduled Maintenance\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScheduledDiagnostics]\n\"EnabledExecution\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Scheduled Maintenance\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScheduledDiagnostics]\n\"EnabledExecution\"=dword:00000001"
+  },
+  {
+    "Name": "Enable Scheduled Maintenance (Troubleshooting Only)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Troubleshooting Only\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScheduledDiagnostics]\n\"EnabledExecution\"=dword:00000001\n\"EnabledExecutionLevel\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScheduledDiagnostics]\n\"EnabledExecutionLevel\"=-"
+  },
+  {
+    "Name": "Enable Scheduled Maintenance (Troubleshooting and Resolution)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Troubleshooting and Resolution\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScheduledDiagnostics]\n\"EnabledExecution\"=dword:00000001\n\"EnabledExecutionLevel\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\ScheduledDiagnostics]\n\"EnabledExecutionLevel\"=-"
+  },
+  {
+    "Name": "Disable Application Telemetry",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Application Telemetry\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat]\n\"AITEnable\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Application Telemetry\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat]\n\"AITEnable\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Program Compatibility Assistant",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Program Compatibility Assistant\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat]\n\"DisablePCA\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Program Compatibility Assistant\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat]\n\"DisablePCA\"=dword:00000000"
+  },
+  {
+    "Name": "Disable SwitchBack Compatibility Engine",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable SwitchBack Compatibility Engine\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat]\n\"SbEnable\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable SwitchBack Compatibility Engine\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat]\n\"SbEnable\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Deployment Operations in Special Profiles",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Allow Deployment in Special Profiles\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Appx]\n\"AllowDeploymentInSpecialProfiles\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Deployment in Special Profiles\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Appx]\n\"AllowDeploymentInSpecialProfiles\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Windows Tips",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Tips\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent]\n\"DisableSoftLanding\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Tips\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent]\n\"DisableSoftLanding\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Cloud Consumer Account State Content",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Cloud Consumer Account State Content\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent]\n\"DisableConsumerAccountStateContent\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Cloud Consumer Account State Content\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent]\n\"DisableConsumerAccountStateContent\"=dword:00000000"
+  },
+  {
+    "Name": "Prevent Projection to This PC",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Projection to This PC\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Connect]\n\"AllowProjectionToPC\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Allow Projection to This PC\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Connect]\n\"AllowProjectionToPC\"=dword:00000001"
+  },
+  {
+    "Name": "Disable Password Reveal Button",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Password Reveal Button\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CredUI]\n\"DisablePasswordReveal\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Password Reveal Button\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\CredUI]\n\"DisablePasswordReveal\"=dword:00000000"
+  },
+  {
+    "Name": "Allow Device Name in Windows Diagnostic Data",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Allow Device Name in Telemetry\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowDeviceNameInTelemetry\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Device Name in Telemetry\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowDeviceNameInTelemetry\"=dword:00000000"
+  },
+  {
+    "Name": "Diagnostic Data Off (Not Recommended)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Diagnostic Data\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default Diagnostic Data Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=-"
+  },
+  {
+    "Name": "Send Required Diagnostic Data",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Send Required Diagnostic Data\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default Diagnostic Data Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=-"
+  },
+  {
+    "Name": "Send Optional Diagnostic Data",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Send Optional Diagnostic Data\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=dword:00000003",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Revert to Default Diagnostic Data Setting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"AllowTelemetry\"=-"
+  },
+  {
+    "Name": "Do Not Show Feedback Notifications",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Feedback Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"DoNotShowFeedbackNotifications\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Feedback Notifications\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection]\n\"DoNotShowFeedbackNotifications\"=dword:00000000"
+  },
+  {
+    "Name": "Show Hibernate in Power Options Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Show Hibernate Option\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowHibernateOption\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Hide Hibernate Option\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowHibernateOption\"=dword:00000000"
+  },
+  {
+    "Name": "Show Sleep in Power Options Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Show Sleep Option\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowSleepOption\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Hide Sleep Option\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"ShowSleepOption\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Heap Termination on Corruption",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Heap Termination on Corruption\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"NoHeapTerminationOnCorruption\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Heap Termination on Corruption\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"NoHeapTerminationOnCorruption\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Numerical Sorting in File Explorer",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Numerical Sorting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStrCmpLogical\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Numerical Sorting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer]\n\"NoStrCmpLogical\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Location Scripting",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Location Scripting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors]\n\"DisableLocationScripting\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Location Scripting\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors]\n\"DisableLocationScripting\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Windows Location Provider",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Windows Location Provider\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors]\n\"DisableWindowsLocationProvider\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable Windows Location Provider\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\LocationAndSensors]\n\"DisableWindowsLocationProvider\"=dword:00000000"
+  },
+  {
+    "Name": "Disable 'New Application Installed' Notification",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable New App Alert\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"NoNewAppAlert\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Enable New App Alert\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer]\n\"NoNewAppAlert\"=dword:00000000"
+  },
+  {
+    "Name": "Enable Sudo (New Window)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Sudo in a New Window\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Sudo Command\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000000"
+  },
+  {
+    "Name": "Enable Sudo (Input Disabled)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Sudo with Input Disabled\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Sudo Command\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000000"
+  },
+  {
+    "Name": "Enable Sudo (Inline)",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Sudo Inline\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000003",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Sudo Command\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000000"
+  },
+  {
+    "Name": "Disable Sudo Command",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Disable Sudo Command\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Sudo]\n\"Enabled\"=dword:00000000",
+    "RevertCode": ""
+  },
+  {
+    "Name": "Always Combine Taskbar buttons and Hide Labels",
+    "Code": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarGlomLevel\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarGlomLevel\"=dword:00000000"
+  },
+  {
+    "Name": "When Taskbar is full \"Combined Taskbar buttons and Hide Labels\"",
+    "Code": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarGlomLevel\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarGlomLevel\"=dword:00000000"
+  },
+  {
+    "Name": "Never \"Combine Taskbar buttons and Hide Labels\"",
+    "Code": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarGlomLevel\"=dword:00000002",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarGlomLevel\"=dword:00000000"
+  },
+  {
+    "Name": "Enable Old ContextMenu",
+    "Code": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\\InprocServer32]\n@=\"\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n[-HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}]"
+  },
+  {
+    "Name": "Add Take Ownership to Context Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Add Take Ownership to Context Menu\n\n[-HKEY_CLASSES_ROOT\\*\\shell\\TakeOwnership]\n[-HKEY_CLASSES_ROOT\\*\\shell\\runas]\n\n[HKEY_CLASSES_ROOT\\*\\shell\\TakeOwnership]\n@=\"Take Ownership\"\n\"Extended\"=-\n\"HasLUAShield\"=\"\"\n\"NoWorkingDirectory\"=\"\"\n\"NeverDefault\"=\"\"\n\n[HKEY_CLASSES_ROOT\\*\\shell\\TakeOwnership\\command]\n@=\"powershell -windowstyle hidden -command \\\"Start-Process cmd -ArgumentList '/c takeown /f \\\\\\\"%1\\\\\\\" && icacls \\\\\\\"%1\\\\\\\" /grant *S-1-3-4:F /t /c /l' -Verb runAs\\\"\"\n\"IsolatedCommand\"= \"powershell -windowstyle hidden -command \\\"Start-Process cmd -ArgumentList '/c takeown /f \\\\\\\"%1\\\\\\\" && icacls \\\\\\\"%1\\\\\\\" /grant *S-1-3-4:F /t /c /l' -Verb runAs\\\"\"\n\n[HKEY_CLASSES_ROOT\\Directory\\shell\\TakeOwnership]\n@=\"Take Ownership\"\n\"AppliesTo\"=\"NOT (System.ItemPathDisplay:=\\\"C:\\\\Users\\\" OR System.ItemPathDisplay:=\\\"C:\\\\ProgramData\\\" OR System.ItemPathDisplay:=\\\"C:\\\\Windows\\\" OR System.ItemPathDisplay:=\\\"C:\\\\Windows\\\\System32\\\" OR System.ItemPathDisplay:=\\\"C:\\\\Program Files\\\" OR System.ItemPathDisplay:=\\\"C:\\\\Program Files (x86)\\\")\"\n\"Extended\"=-\n\"HasLUAShield\"=\"\"\n\"NoWorkingDirectory\"=\"\"\n\"Position\"=\"middle\"\n\n[HKEY_CLASSES_ROOT\\Directory\\shell\\TakeOwnership\\command]\n@=\"powershell -windowstyle hidden -command \\\"$Y = ($null | choice).Substring(1,1); Start-Process cmd -ArgumentList ('/c takeown /f \\\\\\\"%1\\\\\\\" /r /d ' + $Y + ' && icacls \\\\\\\"%1\\\\\\\" /grant *S-1-3-4:F /t /c /l /q') -Verb runAs\\\"\"\n\"IsolatedCommand\"=\"powershell -windowstyle hidden -command \\\"$Y = ($null | choice).Substring(1,1); Start-Process cmd -ArgumentList ('/c takeown /f \\\\\\\"%1\\\\\\\" /r /d ' + $Y + ' && icacls \\\\\\\"%1\\\\\\\" /grant *S-1-3-4:F /t /c /l /q') -Verb runAs\\\"\"\n\n[HKEY_CLASSES_ROOT\\Drive\\shell\\runas]\n@=\"Take Ownership\"\n\"Extended\"=-\n\"HasLUAShield\"=\"\"\n\"NoWorkingDirectory\"=\"\"\n\"Position\"=\"middle\"\n\"AppliesTo\"=\"NOT (System.ItemPathDisplay:=\\\"C:\\\\\")\"\n\n[HKEY_CLASSES_ROOT\\Drive\\shell\\runas\\command]\n@=\"cmd.exe /c takeown /f \\\"%1\\\\\\\" /r /d y && icacls \\\"%1\\\\\\\" /grant *S-1-3-4:F /t /c\"\n\"IsolatedCommand\"=\"cmd.exe /c takeown /f \\\"%1\\\\\\\" /r /d y && icacls \\\"%1\\\\\\\" /grant *S-1-3-4:F /t /c\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Remove Take Ownership from Context Menu\n\n[-HKEY_CLASSES_ROOT\\*\\shell\\TakeOwnership]\n\n[-HKEY_CLASSES_ROOT\\*\\shell\\runas]\n\n[-HKEY_CLASSES_ROOT\\Directory\\shell\\TakeOwnership]\n\n[-HKEY_CLASSES_ROOT\\Drive\\shell\\runas]"
+  },
+  {
+    "Name": "Change Taskbar Alignment to Left",
+    "Code": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarAl\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarAl\"=dword:00000001"
+  },
+  {
+    "Name": "Change Taskbar Alignment to Center",
+    "Code": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarAl\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced]\n\"TaskbarAl\"=dword:00000000"
+  },
+  {
+    "Name": "Enable End Task in Taskbar by Right Click",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Turn On End Task in Taskbar by Right Click\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\TaskbarDeveloperSettings]\n\"TaskbarEndTask\"=dword:00000001",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Turn Off End Task in Taskbar by Right Click\n\n[HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\TaskbarDeveloperSettings]\n\"TaskbarEndTask\"=dword:00000000"
+  },
+  {
+    "Name": "Enable Automatic Maintenance",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Automatic Maintenance\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance]\n\"MaintenanceDisabled\"=-",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Automatic Maintenance\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Schedule\\Maintenance]\n\"MaintenanceDisabled\"=dword:00000001"
+  },
+  {
+    "Name": "Add Registration Entries (REG) to New Context Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Add Registration Entries (REG) to New Context Menu\n\n[HKEY_CLASSES_ROOT\\.reg\\ShellNew]\n\"ItemName\"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,6e,00,6f,00,74,00,65,00,70,00,61,00,64,00,2e,00,65,00,78,00,65,00,2c,00,2d,00,34,00,37,00,30,00,00,00\n\"NullFile\"=\"\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Remove Registration Entries (REG) from New Context Menu\n\n[-HKEY_CLASSES_ROOT\\.reg\\ShellNew]"
+  },
+  {
+    "Name": "Add or Remove 'Add to Favorites' Context Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Add 'Add to Favorites' Context Menu\n\n[-HKEY_CLASSES_ROOT\\*\\shell\\pintohomefile]\n\n[HKEY_CLASSES_ROOT\\*\\shell\\pintohomefile]\n\"CommandStateHandler\"=\"{b455f46e-e4af-4035-b0a4-cf18d2f6f28e}\"\n\"CommandStateSync\"=\"\"\n\"MUIVerb\"=\"@shell32.dll,-51389\"\n\"NeverDefault\"=\"\"\n\"SkipCloudDownload\"=dword:00000000\n\n[HKEY_CLASSES_ROOT\\*\\shell\\pintohomefile\\command]\n\"DelegateExecute\"=\"{b455f46e-e4af-4035-b0a4-cf18d2f6f28e}\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Remove 'Add to Favorites' Context Menu\n\n[-HKEY_CLASSES_ROOT\\*\\shell\\pintohomefile]"
+  },
+  {
+    "Name": "Enable or Disable Font Smoothing",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Font Smoothing\n\n[HKEY_CURRENT_USER\\Control Panel\\Desktop]\n\"FontSmoothing\"=\"2\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Font Smoothing\n\n[HKEY_CURRENT_USER\\Control Panel\\Desktop]\n\"FontSmoothing\"=\"0\""
+  },
+  {
+    "Name": "Add or Remove 'Control Panel' to Desktop Context Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Add 'Control Panel' to Desktop Context Menu\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel]\n\"MUIVerb\"=\"Control Panel\"\n\"SubCommands\"=\"\"\n\"Icon\"=\"imageres.dll,-27\"\n\"Position\"=\"Bottom\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel\\shell\\001menu]\n@=\"Category view\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel\\shell\\001menu\\command]\n@=\"explorer.exe shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel\\shell\\002menu]\n@=\"Icons view\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel\\shell\\002menu\\command]\n@=\"explorer.exe shell:::{21EC2020-3AEA-1069-A2DD-08002B30309D}\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel\\shell\\003menu]\n@=\"All Tasks (God mode)\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel\\shell\\003menu\\command]\n@=\"explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01C}\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Remove 'Control Panel' from Desktop Context Menu\n\n[-HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\ControlPanel]"
+  },
+  {
+    "Name": "Add or Remove 'Hash value' to Context Menu of Files",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Add 'Hash value' to Context Menu of Files\n\n[HKEY_CLASSES_ROOT\\*\\shell\\hash]\n\"MUIVerb\"=\"Hash value\"\n\"SubCommands\"=\"\"\n\n; SHA1\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\01menu]\n\"MUIVerb\"=\"SHA1\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\01menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm SHA1 | format-list\"\n\n; SHA256\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\02menu]\n\"MUIVerb\"=\"SHA256\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\02menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm SHA256 | format-list\"\n\n; SHA384\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\03menu]\n\"MUIVerb\"=\"SHA384\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\03menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm SHA384 | format-list\"\n\n; SHA512\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\04menu]\n\"MUIVerb\"=\"SHA512\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\04menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm SHA512 | format-list\"\n\n; MACTripleDES\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\05menu]\n\"MUIVerb\"=\"MACTripleDES\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\05menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm MACTripleDES | format-list\"\n\n; MD5\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\06menu]\n\"MUIVerb\"=\"MD5\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\06menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm MD5 | format-list\"\n\n; RIPEMD160\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\07menu]\n\"MUIVerb\"=\"RIPEMD160\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\07menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm RIPEMD160 | format-list\"\n\n; Allget-filehash -literalpath '%1' -algorithm RIPEMD160 | format-list\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\08menu]\n\"CommandFlags\"=dword:00000020\n\"MUIVerb\"=\"Show all\"\n[HKEY_CLASSES_ROOT\\*\\shell\\hash\\shell\\08menu\\command]\n@=\"powershell -noexit get-filehash -literalpath \\\"%1\\\" -algorithm SHA1 | format-list;get-filehash -literalpath \\\"%1\\\" -algorithm SHA256 | format-list;get-filehash -literalpath \\\"%1\\\" -algorithm SHA384 | format-list;get-filehash -literalpath \\\"%1\\\" -algorithm SHA512 | format-list;get-filehash -literalpath \\\"%1\\\" -algorithm MACTripleDES | format-list;get-filehash -literalpath \\\"%1\\\" -algorithm MD5 | format-list;get-filehash -literalpath \\\"%1\\\" -algorithm RIPEMD160 | format-list\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Remove 'Hash value' from Context Menu\n\n[-HKEY_CLASSES_ROOT\\*\\shell\\hash]"
+  },
+  {
+    "Name": "Enable or Disable Search on Taskbar and Start Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Enable Search on Taskbar and Start Menu\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PolicyManager\\default\\Search\\DisableSearch]\n\"value\"=dword:00000000\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]\n\"DisableSearch\"=-",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Disable Search on Taskbar and Start Menu for All Users\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\PolicyManager\\default\\Search\\DisableSearch]\n\"value\"=dword:00000001\n\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search]\n\"DisableSearch\"=dword:00000001"
+  },
+  {
+    "Name": "Best power efficiency PowerPlan Mode",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Set PowerPlan to Best power efficiency\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power\\User\\PowerSchemes]\n\"ActiveOverlayAcPowerScheme\"=\"961cc777-2547-4f9d-8174-7d86181b8a7a\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Set PowerPlan to Balanced\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power\\User\\PowerSchemes]\n\"ActiveOverlayAcPowerScheme\"=\"00000000-0000-0000-0000-000000000000\""
+  },
+  {
+    "Name": "Best performance PowerPlan Mode",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Set PowerPlan to Best performance\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power\\User\\PowerSchemes]\n\"ActiveOverlayAcPowerScheme\"=\"ded574b5-45a0-4f42-8737-46345c09c238\"",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Set PowerPlan to Balanced\n\n[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Power\\User\\PowerSchemes]\n\"ActiveOverlayAcPowerScheme\"=\"00000000-0000-0000-0000-000000000000\""
+  },
+  {
+    "Name": "Add or Remove 'System Protection and Restore' to Desktop Context Menu",
+    "Code": "Windows Registry Editor Version 5.00\n\n; --Add 'System Protection and Restore' to Desktop Context Menu\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection]\n\"MUIVerb\"=\"System Protection and Restore\"\n\"Icon\"=\"rstrui.exe\"\n\"Position\"=\"Bottom\"\n\"SubCommands\"=\"\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\001flyout]\n\"MUIVerb\"=\"System Restore\"\n\"HasLUAShield\"=\"\"\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\001flyout\\command]\n@=\"rstrui.exe\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\002flyout]\n\"MUIVerb\"=\"System Protection settings\"\n\"HasLUAShield\"=\"\"\n\"CommandFlags\"=dword:00000020\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\002flyout\\command]\n@=\"SystemPropertiesProtection.exe\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\003flyout]\n\"MUIVerb\"=\"List all restore points\"\n\"HasLUAShield\"=\"\"\n\"CommandFlags\"=dword:00000020\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\003flyout\\command]\n@=\"PowerShell -WindowStyle Hidden -Command \\\"Start-Process cmd -ArgumentList '/s,/k, Powershell -NoExit -Command \\\\\\\"Get-ComputerRestorePoint | Format-Table -AutoSize\\\\\\\"' -Verb RunAs\\\"\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\004flyout]\n\"MUIVerb\"=\"Create restore point\"\n\"HasLUAShield\"=\"\"\n\"CommandFlags\"=dword:00000020\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\004flyout\\command]\n@=\"PowerShell -windowstyle hidden -command \\\"Start-Process cmd -ArgumentList '/s,/c, PowerShell Checkpoint-Computer -Description \\\\\\\"Manual\\\\\\\" -RestorePointType \\\\\\\"MODIFY_SETTINGS\\\\\\\"' -Verb runAs\\\"\"\n\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\005flyout]\n\"MUIVerb\"=\"Delete all restore points\"\n\"HasLUAShield\"=\"\"\n\"CommandFlags\"=dword:00000020\n[HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection\\shell\\005flyout\\command]\n@=\"PowerShell -windowstyle hidden -command \\\"Start-Process cmd -ArgumentList '/s,/c, vssadmin delete shadows /all' -Verb runAs\\\"\"\n\n; To always be able to create a restore point on demand\n[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SystemRestore]\n\"SystemRestorePointCreationFrequency\"=dword:00000000",
+    "RevertCode": "Windows Registry Editor Version 5.00\n\n; --Remove 'System Protection and Restore' from Desktop Context Menu\n\n[-HKEY_CLASSES_ROOT\\DesktopBackground\\Shell\\SystemProtection]"
+  }
+]
